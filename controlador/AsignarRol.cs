@@ -1,6 +1,6 @@
 ﻿namespace controlador
 {
-    public class Class1
+    public class AsignarRol
     {
 
     }
