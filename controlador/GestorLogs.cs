@@ -7,8 +7,10 @@ namespace controlador
 {
     internal class GestorLogs
     {
+        string controlador;    //Se le asigna el nombre del usuario que se logeo
+
         // Método para registrar actividades del usuario
-        public void RegistrarLog(List<Usuario> users, string usuario, string accion)
+        public void RegistrarLog(string usuario, string accion)
         {
             if (!Directory.Exists("C:\\Users\\Luis\\Documents\\Logs"))
             {
@@ -21,10 +23,7 @@ namespace controlador
                 using (StreamWriter writer = new StreamWriter("C:\\Users\\Luis\\Documents\\Logs\\archivo.txt", true))
                 {
                     // Escribe el texto en el archivo
-                    foreach (var user in users)
-                    {
-                        writer.WriteLine($"Usuario: {user.nombre}, Acción: {accion}, Fecha: {DateTime.Now}");
-                    }
+                    writer.WriteLine($"Usuario: {controlador}, Acción: {accion}, Fecha: {DateTime.Now}");
                 }
 
                 Console.WriteLine("Texto almacenado en el archivo correctamente.");
@@ -34,5 +33,6 @@ namespace controlador
                 Console.WriteLine($"Error al escribir en el archivo: {ex.Message}");
             }
         }
+
     }
 }
