@@ -1,6 +1,6 @@
 ﻿namespace visual
 {
-    partial class Login
+    partial class FrmLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -67,6 +67,7 @@
             btnLogin.TabIndex = 13;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // txtPass
             // 
@@ -105,7 +106,7 @@
             label2.TabIndex = 9;
             label2.Text = "Usuario:";
             // 
-            // Form1
+            // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -117,8 +118,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(iniciarSesion_lb);
-            Name = "Form1";
+            Name = "FrmLogin";
             Text = "Form1";
+            Load += FrmLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
