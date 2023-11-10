@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "visual", "visual\visual.csproj", "{7B139FC2-3DBB-4334-ACC8-F749B812EA7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "visual", "visual\visual.csproj", "{7B139FC2-3DBB-4334-ACC8-F749B812EA7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "modelo", "modelo\modelo.csproj", "{2BE10096-1DE8-456E-AB21-4A921066E47B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "modelo", "modelo\modelo.csproj", "{2BE10096-1DE8-456E-AB21-4A921066E47B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "controlador", "controlador\controlador.csproj", "{A0DCBE4A-A953-4B97-9F55-D571A40B8E5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "controlador", "controlador\controlador.csproj", "{A0DCBE4A-A953-4B97-9F55-D571A40B8E5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MODULO_SEGURIDAD", "MODULO_SEGURIDAD", "{85B4F768-7D4E-4980-B5FA-26A60127D957}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PROYECTO_SINCOMPU", "PROYECTO_SINCOMPU", "{2748BF79-B0F4-4DF0-86A5-C89F35D5C49F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +34,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B139FC2-3DBB-4334-ACC8-F749B812EA7C} = {2748BF79-B0F4-4DF0-86A5-C89F35D5C49F}
+		{2BE10096-1DE8-456E-AB21-4A921066E47B} = {85B4F768-7D4E-4980-B5FA-26A60127D957}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4C0428B4-929E-4F72-81BD-515EB7D95217}
