@@ -1,16 +1,18 @@
-﻿using modelo;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace controlador
+namespace modelo
 {
     public class GestorUsuario
     {
-
         // Lista para almacenar usuarios
         private static GestorUsuario instancia;
         public List<Usuario> users = new List<Usuario>();
-        private GestorLogs gestorLogs = new GestorLogs();
 
-        private GestorUsuario(){}
+        private GestorUsuario() { }
 
         public static GestorUsuario Instancia
         {
@@ -29,22 +31,21 @@ namespace controlador
         {
             if (nombreRol == "admin")
             {
-                usuario.Rol = new Rol("admin", "permisos_admin");
+                usuario.Rol = "Admin";
             }
             else if (nombreRol == "supervisor")
             {
-                usuario.Rol = new Rol("supervisor", "permisos_supervisor");
+                usuario.Rol = "Supervisor";
             }
             else if (nombreRol == "trabajador")
             {
-                usuario.Rol = new Rol("trabajador", "permisos_trabajador");
+                usuario.Rol = "Trabajador";
             }
             else if (nombreRol == "estudiante")
             {
-                usuario.Rol = new Rol("estudiante", "permisos_estudiante");
+                usuario.Rol = "Estudiante";
             }
 
-            gestorLogs.RegistrarLog(mod, $"Asignó el rol {nombreRol} al usuario {usuario}");
         }
 
         public void AgregarUsuario(Usuario usuario)
@@ -56,7 +57,7 @@ namespace controlador
         //------------Dato de prueba------------//
         public void AggAdmin()
         {
-            Usuario admin = new("admin", "admin", new Rol("admin", "permisos_admin"), "Guayaquil", 00001, "0959998165");
+            Usuario admin = new("admin", "admin", "Admin", "Guayaquil", 00001, "0959998165");
             AgregarUsuario(admin);
         }
     }

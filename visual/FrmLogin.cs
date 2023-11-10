@@ -4,8 +4,7 @@ namespace visual
 {
     public partial class FrmLogin : Form
     {
-        private readonly Login login = new Login();
-        private readonly GestorUsuario gestorUsuario = GestorUsuario.Instancia; 
+        private readonly Manejador manejador = new Manejador(); 
         public FrmLogin()
         {
             InitializeComponent();
@@ -13,15 +12,15 @@ namespace visual
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string usuario = txtUser.Text;
-            string contraseña = txtPass.Text;
+            string usuario = txtUser.Text.Replace(" ", "");
+            string contraseña = txtPass.Text.Replace(" ", "");
 
 
-            if (login.ValidateLogin(usuario, contraseña))
+            if (manejador.ValidateLogin(usuario, contraseña))
             {
                 this.Hide();
-                int id_usuario = login.ObtenerDatosUsuario(usuario, contraseña).Key;
-                string tipoUsuario = login.ObtenerDatosUsuario(usuario, contraseña).Value;
+                int id_usuario = manejador.ObtenerDatosUsuario(usuario, contraseña).Key;
+                string tipoUsuario = manejador.ObtenerDatosUsuario(usuario, contraseña).Value;
 
                 FrmMenu menu = new(id_usuario, tipoUsuario);
 
@@ -35,13 +34,12 @@ namespace visual
             else
             {
                 MessageBox.Show("Nombre de usuario o contraseña incorrectos.");
-                MessageBox.Show(login.PRUEBA());
             }
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            gestorUsuario.AggAdmin();
+            manejador.AggAdmin();
         }
     }
 }

@@ -1,8 +1,12 @@
-﻿using modelo;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace controlador
+namespace modelo
 {
-    public class Login
+    public class GestorLogin
     {
         private readonly GestorUsuario GU = GestorUsuario.Instancia;
 
@@ -22,16 +26,10 @@ namespace controlador
             return false;
         }
 
-        public string PRUEBA()
-        {
-            string lista = string.Join(", ", GU.users);
-            return lista;
-        }
-
         public KeyValuePair<int, string> ObtenerDatosUsuario(string usuario, string contraseña)
         {
             int id_usuario = 0;
-            string tipoUsuario = null;
+            string tipoUsuario = "";
 
             foreach (Usuario user in GU.users)
             {
@@ -39,7 +37,7 @@ namespace controlador
                 if (usuario == user.nombre && contraseña == user.contraseña)
                 {
                     id_usuario = user.id;
-                    tipoUsuario = user.Rol.nombre;
+                    tipoUsuario = user.Rol;
                 }
             }
 
