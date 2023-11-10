@@ -47,6 +47,7 @@
             modificacionDeFacturaToolStripMenuItem = new ToolStripMenuItem();
             eliminacionDeFacturaToolStripMenuItem = new ToolStripMenuItem();
             imprimirFacturaToolStripMenuItem = new ToolStripMenuItem();
+            panel = new Panel();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,18 +78,21 @@
             nuevoRegistroToolStripMenuItem.Name = "nuevoRegistroToolStripMenuItem";
             nuevoRegistroToolStripMenuItem.Size = new Size(172, 22);
             nuevoRegistroToolStripMenuItem.Text = "Nuevo Registro";
+            nuevoRegistroToolStripMenuItem.Click += nuevoRegistroToolStripMenuItem_Click;
             // 
             // actualizarRegistroToolStripMenuItem
             // 
             actualizarRegistroToolStripMenuItem.Name = "actualizarRegistroToolStripMenuItem";
             actualizarRegistroToolStripMenuItem.Size = new Size(172, 22);
             actualizarRegistroToolStripMenuItem.Text = "Actualizar Registro";
+            actualizarRegistroToolStripMenuItem.Click += actualizarRegistroToolStripMenuItem_Click;
             // 
             // eliminarRegistroToolStripMenuItem
             // 
             eliminarRegistroToolStripMenuItem.Name = "eliminarRegistroToolStripMenuItem";
             eliminarRegistroToolStripMenuItem.Size = new Size(172, 22);
             eliminarRegistroToolStripMenuItem.Text = "Eliminar Registro";
+            eliminarRegistroToolStripMenuItem.Click += eliminarRegistroToolStripMenuItem_Click;
             // 
             // automatizacionDeCalculoToolStripMenuItem
             // 
@@ -171,11 +175,19 @@
             imprimirFacturaToolStripMenuItem.Size = new Size(200, 22);
             imprimirFacturaToolStripMenuItem.Text = "Imprimir factura";
             // 
+            // panel
+            // 
+            panel.Location = new Point(0, 27);
+            panel.Name = "panel";
+            panel.Size = new Size(800, 424);
+            panel.TabIndex = 21;
+            // 
             // FrmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panel);
             Controls.Add(menuStrip1);
             Name = "FrmMenu";
             Text = "FrmMenu";
@@ -206,5 +218,6 @@
         private ToolStripMenuItem modificacionDeFacturaToolStripMenuItem;
         private ToolStripMenuItem eliminacionDeFacturaToolStripMenuItem;
         private ToolStripMenuItem imprimirFacturaToolStripMenuItem;
+        private Panel panel;
     }
 }

@@ -45,28 +45,8 @@
             label8 = new Label();
             cmbSexo = new ComboBox();
             btnRegistrar = new Button();
-            menuStrip1 = new MenuStrip();
-            toolStripMenuItem1 = new ToolStripMenuItem();
-            personalToolStripMenuItem = new ToolStripMenuItem();
-            nuevoRegistroToolStripMenuItem = new ToolStripMenuItem();
-            actualizarRegistroToolStripMenuItem = new ToolStripMenuItem();
-            eliminarRegistroToolStripMenuItem = new ToolStripMenuItem();
-            automatizacionDeCalculoToolStripMenuItem = new ToolStripMenuItem();
-            registrarTransaccionesToolStripMenuItem = new ToolStripMenuItem();
-            formulasDeCalculoToolStripMenuItem = new ToolStripMenuItem();
-            registroActivoFijosToolStripMenuItem = new ToolStripMenuItem();
-            calculosFinancierosToolStripMenuItem = new ToolStripMenuItem();
-            seguridadToolStripMenuItem = new ToolStripMenuItem();
-            asignarRolesToolStripMenuItem = new ToolStripMenuItem();
-            logsDeUsuarioToolStripMenuItem = new ToolStripMenuItem();
-            facturaciónToolStripMenuItem = new ToolStripMenuItem();
-            registroDeFacturaToolStripMenuItem = new ToolStripMenuItem();
-            modificacionDeFacturaToolStripMenuItem = new ToolStripMenuItem();
-            eliminacionDeFacturaToolStripMenuItem = new ToolStripMenuItem();
-            imprimirFacturaToolStripMenuItem = new ToolStripMenuItem();
             btnRegresar = new Button();
             label9 = new Label();
-            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // txtNombre
@@ -208,128 +188,6 @@
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
-            // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, personalToolStripMenuItem, automatizacionDeCalculoToolStripMenuItem, seguridadToolStripMenuItem, facturaciónToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
-            menuStrip1.TabIndex = 17;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(48, 20);
-            toolStripMenuItem1.Text = "Inicio";
-            // 
-            // personalToolStripMenuItem
-            // 
-            personalToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevoRegistroToolStripMenuItem, actualizarRegistroToolStripMenuItem, eliminarRegistroToolStripMenuItem });
-            personalToolStripMenuItem.Name = "personalToolStripMenuItem";
-            personalToolStripMenuItem.Size = new Size(64, 20);
-            personalToolStripMenuItem.Text = "Personal";
-            // 
-            // nuevoRegistroToolStripMenuItem
-            // 
-            nuevoRegistroToolStripMenuItem.Name = "nuevoRegistroToolStripMenuItem";
-            nuevoRegistroToolStripMenuItem.Size = new Size(180, 22);
-            nuevoRegistroToolStripMenuItem.Text = "Nuevo Registro";
-            nuevoRegistroToolStripMenuItem.Click += nuevoRegistroToolStripMenuItem_Click;
-            // 
-            // actualizarRegistroToolStripMenuItem
-            // 
-            actualizarRegistroToolStripMenuItem.Name = "actualizarRegistroToolStripMenuItem";
-            actualizarRegistroToolStripMenuItem.Size = new Size(180, 22);
-            actualizarRegistroToolStripMenuItem.Text = "Actualizar Registro";
-            // 
-            // eliminarRegistroToolStripMenuItem
-            // 
-            eliminarRegistroToolStripMenuItem.Name = "eliminarRegistroToolStripMenuItem";
-            eliminarRegistroToolStripMenuItem.Size = new Size(180, 22);
-            eliminarRegistroToolStripMenuItem.Text = "Eliminar Registro";
-            // 
-            // automatizacionDeCalculoToolStripMenuItem
-            // 
-            automatizacionDeCalculoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registrarTransaccionesToolStripMenuItem, formulasDeCalculoToolStripMenuItem, registroActivoFijosToolStripMenuItem, calculosFinancierosToolStripMenuItem });
-            automatizacionDeCalculoToolStripMenuItem.Name = "automatizacionDeCalculoToolStripMenuItem";
-            automatizacionDeCalculoToolStripMenuItem.Size = new Size(162, 20);
-            automatizacionDeCalculoToolStripMenuItem.Text = "Automatizacion de Calculo";
-            // 
-            // registrarTransaccionesToolStripMenuItem
-            // 
-            registrarTransaccionesToolStripMenuItem.Name = "registrarTransaccionesToolStripMenuItem";
-            registrarTransaccionesToolStripMenuItem.Size = new Size(192, 22);
-            registrarTransaccionesToolStripMenuItem.Text = "Registro transacciones";
-            // 
-            // formulasDeCalculoToolStripMenuItem
-            // 
-            formulasDeCalculoToolStripMenuItem.Name = "formulasDeCalculoToolStripMenuItem";
-            formulasDeCalculoToolStripMenuItem.Size = new Size(192, 22);
-            formulasDeCalculoToolStripMenuItem.Text = "Formulas de calculo";
-            // 
-            // registroActivoFijosToolStripMenuItem
-            // 
-            registroActivoFijosToolStripMenuItem.Name = "registroActivoFijosToolStripMenuItem";
-            registroActivoFijosToolStripMenuItem.Size = new Size(192, 22);
-            registroActivoFijosToolStripMenuItem.Text = "Registro activo fijos";
-            // 
-            // calculosFinancierosToolStripMenuItem
-            // 
-            calculosFinancierosToolStripMenuItem.Name = "calculosFinancierosToolStripMenuItem";
-            calculosFinancierosToolStripMenuItem.Size = new Size(192, 22);
-            calculosFinancierosToolStripMenuItem.Text = "Calculos financieros";
-            // 
-            // seguridadToolStripMenuItem
-            // 
-            seguridadToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { asignarRolesToolStripMenuItem, logsDeUsuarioToolStripMenuItem });
-            seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            seguridadToolStripMenuItem.Size = new Size(72, 20);
-            seguridadToolStripMenuItem.Text = "Seguridad";
-            // 
-            // asignarRolesToolStripMenuItem
-            // 
-            asignarRolesToolStripMenuItem.Name = "asignarRolesToolStripMenuItem";
-            asignarRolesToolStripMenuItem.Size = new Size(180, 22);
-            asignarRolesToolStripMenuItem.Text = "Asignar roles";
-            // 
-            // logsDeUsuarioToolStripMenuItem
-            // 
-            logsDeUsuarioToolStripMenuItem.Name = "logsDeUsuarioToolStripMenuItem";
-            logsDeUsuarioToolStripMenuItem.Size = new Size(180, 22);
-            logsDeUsuarioToolStripMenuItem.Text = "Logs de usuario";
-            // 
-            // facturaciónToolStripMenuItem
-            // 
-            facturaciónToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registroDeFacturaToolStripMenuItem, modificacionDeFacturaToolStripMenuItem, eliminacionDeFacturaToolStripMenuItem, imprimirFacturaToolStripMenuItem });
-            facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            facturaciónToolStripMenuItem.Size = new Size(81, 20);
-            facturaciónToolStripMenuItem.Text = "Facturación";
-            // 
-            // registroDeFacturaToolStripMenuItem
-            // 
-            registroDeFacturaToolStripMenuItem.Name = "registroDeFacturaToolStripMenuItem";
-            registroDeFacturaToolStripMenuItem.Size = new Size(200, 22);
-            registroDeFacturaToolStripMenuItem.Text = "Registro de factura";
-            // 
-            // modificacionDeFacturaToolStripMenuItem
-            // 
-            modificacionDeFacturaToolStripMenuItem.Name = "modificacionDeFacturaToolStripMenuItem";
-            modificacionDeFacturaToolStripMenuItem.Size = new Size(200, 22);
-            modificacionDeFacturaToolStripMenuItem.Text = "Modificación de factura";
-            // 
-            // eliminacionDeFacturaToolStripMenuItem
-            // 
-            eliminacionDeFacturaToolStripMenuItem.Name = "eliminacionDeFacturaToolStripMenuItem";
-            eliminacionDeFacturaToolStripMenuItem.Size = new Size(200, 22);
-            eliminacionDeFacturaToolStripMenuItem.Text = "Eliminación de factura";
-            // 
-            // imprimirFacturaToolStripMenuItem
-            // 
-            imprimirFacturaToolStripMenuItem.Name = "imprimirFacturaToolStripMenuItem";
-            imprimirFacturaToolStripMenuItem.Size = new Size(200, 22);
-            imprimirFacturaToolStripMenuItem.Text = "Imprimir factura";
-            // 
             // btnRegresar
             // 
             btnRegresar.Location = new Point(411, 352);
@@ -373,12 +231,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtNombre);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
             Name = "NuevoRegistro";
             Text = "NuevoRegistro";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -402,25 +256,6 @@
         private Label label8;
         private ComboBox cmbSexo;
         private Button btnRegistrar;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem personalToolStripMenuItem;
-        private ToolStripMenuItem nuevoRegistroToolStripMenuItem;
-        private ToolStripMenuItem actualizarRegistroToolStripMenuItem;
-        private ToolStripMenuItem eliminarRegistroToolStripMenuItem;
-        private ToolStripMenuItem automatizacionDeCalculoToolStripMenuItem;
-        private ToolStripMenuItem registrarTransaccionesToolStripMenuItem;
-        private ToolStripMenuItem formulasDeCalculoToolStripMenuItem;
-        private ToolStripMenuItem registroActivoFijosToolStripMenuItem;
-        private ToolStripMenuItem calculosFinancierosToolStripMenuItem;
-        private ToolStripMenuItem seguridadToolStripMenuItem;
-        private ToolStripMenuItem asignarRolesToolStripMenuItem;
-        private ToolStripMenuItem logsDeUsuarioToolStripMenuItem;
-        private ToolStripMenuItem facturaciónToolStripMenuItem;
-        private ToolStripMenuItem registroDeFacturaToolStripMenuItem;
-        private ToolStripMenuItem modificacionDeFacturaToolStripMenuItem;
-        private ToolStripMenuItem eliminacionDeFacturaToolStripMenuItem;
-        private ToolStripMenuItem imprimirFacturaToolStripMenuItem;
         private Button btnRegresar;
         private Label label9;
     }
