@@ -1,11 +1,10 @@
-﻿using controlador;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace modelo
+namespace ModuloSeguridad
 {
     public class GestorUsuario
     {
@@ -62,7 +61,7 @@ namespace modelo
         //------------Dato de prueba------------//
         public void AggAdmin()
         {
-            Usuario admin = new("admin", "admin", "Admin", "Guayaquil", 00001, "0959998165");
+            Usuario admin = new("admin", "admin", "admin", "Admin", "Guayaquil", "0923671937", "0959998165", 'A');
             AgregarUsuario(admin);
         }
     }

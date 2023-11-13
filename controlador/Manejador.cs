@@ -1,30 +1,21 @@
-﻿using modelo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ModuloSeguridad;
 
 namespace controlador
 {
     public class Manejador
     {
-        private readonly GestorLogin login = new GestorLogin();
-        private readonly GestorUsuario gestorUsuario = GestorUsuario.Instancia;
+        private readonly IGestorLogin login;
 
-        public bool ValidateLogin(string usuario, string contraseña)
+        public Manejador(IGestorLogin login)
         {
-            return login.ValidateLogin(usuario, contraseña);
+            this.login = login;
         }
 
-        public KeyValuePair<int, string> ObtenerDatosUsuario(string usuario, string contraseña)
+        public Usuario Login(string usuario, string contraseña)
         {
-            return login.ObtenerDatosUsuario(usuario, contraseña);
+            return login.Login(usuario, contraseña);
         }
 
-        public void AggAdmin()
-        {
-            gestorUsuario.AggAdmin();
-        }
-    }  
+
+    }
 }

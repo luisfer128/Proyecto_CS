@@ -1,9 +1,8 @@
-﻿using modelo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace controlador
+namespace ModuloSeguridad
 {
     public class GestorLogs
     {

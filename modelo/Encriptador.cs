@@ -7,11 +7,11 @@ using System.Text;
 
 namespace ModuloSeguridad
 {
-    internal class Encriptador
+    public class Encriptador
     {
-        private static readonly string key = "9B0.o32Yhtc";
+        private static readonly string key = "9YuGuMhDJHMva6qe";
 
-        public static string Encriptar(string textoPlano)
+        public string Encriptar(string textoPlano)
         {
             using (Aes aesAlg = Aes.Create())
             {
@@ -35,7 +35,7 @@ namespace ModuloSeguridad
             }
         }
 
-        public static string Desencriptar(string textoCifrado)
+        public string Desencriptar(string textoCifrado)
         {
             using (Aes aesAlg = Aes.Create())
             {

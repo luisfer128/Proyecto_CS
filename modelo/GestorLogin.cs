@@ -1,47 +1,72 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
+using DataBase_Manage;
 
-namespace modelo
+namespace ModuloSeguridad
 {
-    public class GestorLogin
+    public class GestorLogin : IGestorLogin
     {
-        private readonly GestorUsuario GU = GestorUsuario.Instancia;
+        private readonly CD_Connection conn = new CD_Connection();
+        private Encriptador ed = new Encriptador();
 
-
-        // Método para validar el inicio de sesión
-        public bool ValidateLogin(string usuario, string contraseña)
+        public Usuario Login(string usuario, string contraseña)
         {
-            // Itera sobre la lista de usuarios y verifica si las credenciales coinciden
-            foreach (Usuario user in GU.users)
+            try
             {
-                if (usuario == user.nombre && contraseña == user.contraseña)
-                {
-                    return true;
-                }
-            }
+                DataTable dataTable = new DataTable();
 
-            return false;
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter())
+                    {
+                        // Asignar la conexión
+                        sqlCommand.Connection = conn.OpenConnection();
+                        sqlCommand.CommandText = "ObtenerUsuario";
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.AddWithValue("@UsuarioIngresado", usuario);
+
+                        // Llamamos al constructor del data adapter
+                        dataAdapter.SelectCommand = sqlCommand;
+
+                        // Verificar que la conexión esté abierta antes de llamar a Fill
+                        if (conn.OpenConnection().State == ConnectionState.Open)
+                        {
+                            // Asignar el dataAdapter al DataTable
+                            dataAdapter.Fill(dataTable);
+                        }
+                    }
+                }
+
+                // Verificar si se encontró un usuario
+                if (dataTable.Rows.Count > 0)
+                {
+                    DataRow row = dataTable.Rows[0];
+                    string idUsuario = row["Id_Usuario"].ToString();
+                    string rol = row["Rol"].ToString();
+
+                    // Aquí puedes comparar la contraseña (deberías usar lógica segura para comparar contraseñas)
+                    if (row["Contraseña"].ToString() == ed.Encriptar(contraseña))
+                    {
+                        // Autenticación exitosa, devuelve el usuario autenticado
+                        return new Usuario { id = idUsuario, Rol = rol };
+                    }
+                }
+
+                // Autenticación fallida
+                return null;
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores, puedes agregar lógica para registrar el error o mostrar un mensaje al usuario
+                throw ex;
+            }
+            finally
+            {
+                conn.CloseConnection();
+            }
         }
 
-        public KeyValuePair<int, string> ObtenerDatosUsuario(string usuario, string contraseña)
-        {
-            int id_usuario = 0;
-            string tipoUsuario = "";
-
-            foreach (Usuario user in GU.users)
-            {
-
-                if (usuario == user.nombre && contraseña == user.contraseña)
-                {
-                    id_usuario = user.id;
-                    tipoUsuario = user.Rol;
-                }
-            }
-
-            return new KeyValuePair<int, string>(id_usuario, tipoUsuario);
-        }
     }
 }
+

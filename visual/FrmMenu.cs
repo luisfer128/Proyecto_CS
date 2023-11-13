@@ -15,7 +15,7 @@ namespace visual
         readonly string id_Usuario;
         private Form form = null;
 
-        public FrmMenu(int id_Usuario, string tipoUsuario)
+        public FrmMenu(string id_Usuario, string tipoUsuario)
         {
             InitializeComponent();
             this.IsMdiContainer = true;

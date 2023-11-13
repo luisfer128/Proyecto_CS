@@ -33,6 +33,9 @@
             cmbPerfil = new ComboBox();
             btnEliminar = new Button();
             btnRegresar = new Button();
+            checkBox1 = new CheckBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label9
@@ -57,7 +60,7 @@
             // cmbPerfil
             // 
             cmbPerfil.FormattingEnabled = true;
-            cmbPerfil.Location = new Point(367, 159);
+            cmbPerfil.Location = new Point(332, 164);
             cmbPerfil.Name = "cmbPerfil";
             cmbPerfil.Size = new Size(121, 23);
             cmbPerfil.TabIndex = 38;
@@ -80,12 +83,35 @@
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(292, 282);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(150, 19);
+            checkBox1.TabIndex = 41;
+            checkBox1.Text = "Quiero eliminar el perfil";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.delete_user_profile_account_remove_icon_196557;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(84, 82);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 42;
+            pictureBox1.TabStop = false;
+            // 
             // EliminarRegistro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             ControlBox = false;
+            Controls.Add(pictureBox1);
+            Controls.Add(checkBox1);
             Controls.Add(btnRegresar);
             Controls.Add(btnEliminar);
             Controls.Add(cmbPerfil);
@@ -97,6 +123,7 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             Text = "EliminarRegistro";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -107,5 +134,7 @@
         private ComboBox cmbPerfil;
         private Button btnEliminar;
         private Button btnRegresar;
+        private CheckBox checkBox1;
+        private PictureBox pictureBox1;
     }
 }

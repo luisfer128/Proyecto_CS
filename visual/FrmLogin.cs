@@ -1,30 +1,38 @@
 using controlador;
+using ModuloSeguridad;
+using System.Security.Cryptography;
+using System.Text;
+using System.Windows.Forms;
 
 namespace visual
 {
     public partial class FrmLogin : Form
     {
-        private readonly Manejador manejador = new Manejador(); 
+        private readonly IGestorLogin gestorLogin = new GestorLogin();
+        private readonly Manejador manejador;
+
         public FrmLogin()
         {
             InitializeComponent();
+            manejador = new Manejador(gestorLogin);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string usuario = txtUser.Text.Replace(" ", "");
-            string contraseña = txtPass.Text.Replace(" ", "");
+            string contraseÃ±a = txtPass.Text.Replace(" ", "");
 
+            Usuario usuarioAutenticado = manejador.Login(usuario, contraseÃ±a);
 
-            if (manejador.ValidateLogin(usuario, contraseña))
+            if (usuarioAutenticado != null)
             {
                 this.Hide();
-                int id_usuario = manejador.ObtenerDatosUsuario(usuario, contraseña).Key;
-                string tipoUsuario = manejador.ObtenerDatosUsuario(usuario, contraseña).Value;
+                string id_usuario = usuarioAutenticado.id;
+                string tipoUsuario = usuarioAutenticado.Rol;
 
-                FrmMenu menu = new(id_usuario, tipoUsuario);
+                FrmMenu menu = new FrmMenu(id_usuario, tipoUsuario);
 
-                MessageBox.Show("Logeo exitoso \nUsted ingresó como: " + tipoUsuario);
+                MessageBox.Show("Logeo exitoso \nUsted ingresa como: " + tipoUsuario);
 
                 menu.ShowDialog();
                 txtUser.Text = "";
@@ -33,13 +41,15 @@ namespace visual
             }
             else
             {
-                MessageBox.Show("Nombre de usuario o contraseña incorrectos.");
+                MessageBox.Show("Nombre de usuario o contraseÃ±a incorrectos.");
             }
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            manejador.AggAdmin();
+
+
         }
+
     }
 }
