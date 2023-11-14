@@ -28,7 +28,7 @@ namespace visual
             {
                 this.Hide();
                 string id_usuario = usuarioAutenticado.id;
-                string tipoUsuario = usuarioAutenticado.Rol;
+                string tipoUsuario = usuarioAutenticado.rol;
 
                 FrmMenu menu = new FrmMenu(id_usuario, tipoUsuario);
 

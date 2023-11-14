@@ -34,35 +34,23 @@ namespace ModuloSeguridad
         {
             if (nombreRol == "Admin")
             {
-                usuario.Rol = "Admin";
+                usuario.rol = "Admin";
             }
             else if (nombreRol == "Supervisor")
             {
-                usuario.Rol = "Supervisor";
+                usuario.rol = "Supervisor";
             }
             else if (nombreRol == "Trabajador")
             {
-                usuario.Rol = "Trabajador";
+                usuario.rol = "Trabajador";
             }
             else if (nombreRol == "Estudiante")
             {
-                usuario.Rol = "Estudiante";
+                usuario.rol = "Estudiante";
             }
 
             log.RegistrarLog(mod, $"Cambio de rol al usuario:{usuario.nombre} a rol: {nombreRol}");
         }
 
-        public void AgregarUsuario(Usuario usuario)
-        {
-            users.Add(usuario);
-        }
-
-
-        //------------Dato de prueba------------//
-        public void AggAdmin()
-        {
-            Usuario admin = new("admin", "admin", "admin", "Admin", "Guayaquil", "0923671937", "0959998165", 'A');
-            AgregarUsuario(admin);
-        }
     }
 }

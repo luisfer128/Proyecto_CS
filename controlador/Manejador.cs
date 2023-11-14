@@ -1,11 +1,12 @@
-﻿using ModuloSeguridad;
+﻿using ModuloRegistro;
+using ModuloSeguridad;
 
 namespace controlador
 {
     public class Manejador
     {
         private readonly IGestorLogin login;
-
+        
         public Manejador(IGestorLogin login)
         {
             this.login = login;
@@ -15,6 +16,7 @@ namespace controlador
         {
             return login.Login(usuario, contraseña);
         }
+
 
 
     }

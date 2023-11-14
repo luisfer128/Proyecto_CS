@@ -49,7 +49,7 @@ namespace ModuloSeguridad
                     if (row["Contraseña"].ToString() == ed.Encriptar(contraseña))
                     {
                         // Autenticación exitosa, devuelve el usuario autenticado
-                        return new Usuario { id = idUsuario, Rol = rol };
+                        return new Usuario { id = idUsuario, rol = rol };
                     }
                 }
 

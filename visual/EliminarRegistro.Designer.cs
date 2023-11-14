@@ -59,6 +59,7 @@
             // 
             // cmbPerfil
             // 
+            cmbPerfil.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPerfil.FormattingEnabled = true;
             cmbPerfil.Location = new Point(332, 164);
             cmbPerfil.Name = "cmbPerfil";
@@ -67,12 +68,14 @@
             // 
             // btnEliminar
             // 
+            btnEliminar.Enabled = false;
             btnEliminar.Location = new Point(292, 307);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(75, 23);
             btnEliminar.TabIndex = 39;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnRegresar
             // 
@@ -82,6 +85,7 @@
             btnRegresar.TabIndex = 40;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
+            btnRegresar.Click += btnRegresar_Click;
             // 
             // checkBox1
             // 
@@ -92,6 +96,7 @@
             checkBox1.TabIndex = 41;
             checkBox1.Text = "Quiero eliminar el perfil";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // pictureBox1
             // 
@@ -123,6 +128,7 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             Text = "EliminarRegistro";
+            Load += EliminarRegistro_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

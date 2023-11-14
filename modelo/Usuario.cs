@@ -4,8 +4,9 @@
     {
         public string nombre { get; set; }
         public string apellido { get; set; }
+        public string usuario { get; set; }
         public string contraseña { get; set; }
-        public string Rol { get; set; }
+        public string rol { get; set; }
         public string direccion { get; set; }
         public string id { get; set; }
         public string telefono { get; set; }
@@ -13,12 +14,13 @@
 
         public Usuario() { }
 
-        public Usuario(string nombre, string apellido, string contraseña, string rol, string direccion, string id, string telefono, char estado)
+        public Usuario(string nombre, string apellido,string usuario ,string contraseña, string rol, string direccion, string id, string telefono, char estado)
         {
             this.nombre = nombre;
             this.apellido = apellido;
+            this.usuario = usuario;
             this.contraseña = contraseña;
-            this.Rol = rol;
+            this.rol = rol;
             this.direccion = direccion;
             this.id = id;
             this.telefono = telefono;
