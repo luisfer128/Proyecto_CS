@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 
 
@@ -26,7 +23,16 @@ namespace ModuloSeguridad
                     {
                         using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
                         {
-                            swEncrypt.Write(textoPlano);
+
+                            if (textoPlano != null)
+                            {
+                                swEncrypt.Write(textoPlano);
+                            }
+                            else
+                            {
+                                return null;
+                            }
+
                         }
                     }
 
@@ -44,15 +50,22 @@ namespace ModuloSeguridad
 
                 ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
 
-                using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(textoCifrado)))
+                if (textoCifrado != null)
                 {
-                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(textoCifrado)))
                     {
-                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
                         {
-                            return srDecrypt.ReadToEnd();
+                            using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                            {
+                                return srDecrypt.ReadToEnd();
+                            }
                         }
                     }
+                }
+                else
+                {
+                    return null;
                 }
             }
         }

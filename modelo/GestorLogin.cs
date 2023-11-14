@@ -1,5 +1,4 @@
 ﻿using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
 using DataBase_Manage;
 
@@ -58,7 +57,7 @@ namespace ModuloSeguridad
             }
             catch (Exception ex)
             {
-                // Manejo de errores, puedes agregar lógica para registrar el error o mostrar un mensaje al usuario
+                // Manejo de errores
                 throw ex;
             }
             finally

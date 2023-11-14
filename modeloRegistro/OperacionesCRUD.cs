@@ -44,7 +44,7 @@ namespace ModuloRegistro
             }
             catch (Exception ex)
             {
-                // Manejo de errores, puedes agregar lógica para registrar el error o mostrar un mensaje al usuario
+                // Manejo de errores
                 throw ex;
             }
             finally
@@ -143,7 +143,6 @@ namespace ModuloRegistro
                         usuario = row["User"].ToString(),
                         nombre = row["Nombre"].ToString(),
                         apellido = row["Apellido"].ToString(),
-                        contraseña = row["Contraseña"].ToString(),
                         rol = row["Rol"].ToString(),
                         direccion = row["Direccion"].ToString(),
                         telefono = row["Telefono"].ToString(),
@@ -156,7 +155,7 @@ namespace ModuloRegistro
             }
             catch (Exception ex)
             {
-                // Manejo de errores, puedes agregar lógica para registrar el error o mostrar un mensaje al usuario
+                // Manejo de errores
                 throw ex;
             }
             finally
