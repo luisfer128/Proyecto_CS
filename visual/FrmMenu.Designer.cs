@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
             personalToolStripMenuItem = new ToolStripMenuItem();
@@ -39,21 +40,20 @@
             formulasDeCalculoToolStripMenuItem = new ToolStripMenuItem();
             registroActivoFijosToolStripMenuItem = new ToolStripMenuItem();
             calculosFinancierosToolStripMenuItem = new ToolStripMenuItem();
-            seguridadToolStripMenuItem = new ToolStripMenuItem();
-            asignarRolesToolStripMenuItem = new ToolStripMenuItem();
-            logsDeUsuarioToolStripMenuItem = new ToolStripMenuItem();
             facturaciónToolStripMenuItem = new ToolStripMenuItem();
             registroDeFacturaToolStripMenuItem = new ToolStripMenuItem();
             modificacionDeFacturaToolStripMenuItem = new ToolStripMenuItem();
             eliminacionDeFacturaToolStripMenuItem = new ToolStripMenuItem();
             imprimirFacturaToolStripMenuItem = new ToolStripMenuItem();
+            cerrarSesiónToolStripMenuItem = new ToolStripMenuItem();
             panel = new Panel();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, personalToolStripMenuItem, automatizacionDeCalculoToolStripMenuItem, seguridadToolStripMenuItem, facturaciónToolStripMenuItem });
+            menuStrip1.BackColor = Color.AntiqueWhite;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, personalToolStripMenuItem, automatizacionDeCalculoToolStripMenuItem, facturaciónToolStripMenuItem, cerrarSesiónToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -65,6 +65,7 @@
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new Size(48, 20);
             toolStripMenuItem1.Text = "Inicio";
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
             // personalToolStripMenuItem
             // 
@@ -125,25 +126,6 @@
             calculosFinancierosToolStripMenuItem.Size = new Size(192, 22);
             calculosFinancierosToolStripMenuItem.Text = "Calculos financieros";
             // 
-            // seguridadToolStripMenuItem
-            // 
-            seguridadToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { asignarRolesToolStripMenuItem, logsDeUsuarioToolStripMenuItem });
-            seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            seguridadToolStripMenuItem.Size = new Size(72, 20);
-            seguridadToolStripMenuItem.Text = "Seguridad";
-            // 
-            // asignarRolesToolStripMenuItem
-            // 
-            asignarRolesToolStripMenuItem.Name = "asignarRolesToolStripMenuItem";
-            asignarRolesToolStripMenuItem.Size = new Size(157, 22);
-            asignarRolesToolStripMenuItem.Text = "Asignar roles";
-            // 
-            // logsDeUsuarioToolStripMenuItem
-            // 
-            logsDeUsuarioToolStripMenuItem.Name = "logsDeUsuarioToolStripMenuItem";
-            logsDeUsuarioToolStripMenuItem.Size = new Size(157, 22);
-            logsDeUsuarioToolStripMenuItem.Text = "Logs de usuario";
-            // 
             // facturaciónToolStripMenuItem
             // 
             facturaciónToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registroDeFacturaToolStripMenuItem, modificacionDeFacturaToolStripMenuItem, eliminacionDeFacturaToolStripMenuItem, imprimirFacturaToolStripMenuItem });
@@ -175,8 +157,19 @@
             imprimirFacturaToolStripMenuItem.Size = new Size(200, 22);
             imprimirFacturaToolStripMenuItem.Text = "Imprimir factura";
             // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            cerrarSesiónToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            cerrarSesiónToolStripMenuItem.RightToLeft = RightToLeft.No;
+            cerrarSesiónToolStripMenuItem.Size = new Size(88, 20);
+            cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
+            cerrarSesiónToolStripMenuItem.Click += cerrarSesiónToolStripMenuItem_Click;
+            // 
             // panel
             // 
+            panel.BackgroundImage = Properties.Resources._7b71d9b8_42ad_4d49_bc6b_d2d149fcafb3_removebg_preview;
+            panel.BackgroundImageLayout = ImageLayout.Center;
             panel.Location = new Point(0, 27);
             panel.Name = "panel";
             panel.Size = new Size(800, 424);
@@ -186,11 +179,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Wheat;
             ClientSize = new Size(800, 450);
             Controls.Add(panel);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmMenu";
-            Text = "FrmMenu";
+            Text = "Menu";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -210,14 +205,12 @@
         private ToolStripMenuItem formulasDeCalculoToolStripMenuItem;
         private ToolStripMenuItem registroActivoFijosToolStripMenuItem;
         private ToolStripMenuItem calculosFinancierosToolStripMenuItem;
-        private ToolStripMenuItem seguridadToolStripMenuItem;
-        private ToolStripMenuItem asignarRolesToolStripMenuItem;
-        private ToolStripMenuItem logsDeUsuarioToolStripMenuItem;
         private ToolStripMenuItem facturaciónToolStripMenuItem;
         private ToolStripMenuItem registroDeFacturaToolStripMenuItem;
         private ToolStripMenuItem modificacionDeFacturaToolStripMenuItem;
         private ToolStripMenuItem eliminacionDeFacturaToolStripMenuItem;
         private ToolStripMenuItem imprimirFacturaToolStripMenuItem;
         private Panel panel;
+        private ToolStripMenuItem cerrarSesiónToolStripMenuItem;
     }
 }

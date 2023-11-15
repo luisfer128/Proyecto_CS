@@ -53,7 +53,7 @@ namespace ModuloRegistro
             }
         }
                 
-        public void ActualizarUsuario(string id_usuario,string nombre, string apellido, string contraseña, string rol, string direccion,char estado, string telefono)
+        public void ActualizarUsuario(string id_usuario,string nombre, string apellido, string rol, string direccion,char estado, string telefono)
         {
             try
             {
@@ -66,7 +66,6 @@ namespace ModuloRegistro
                     sqlCommand.Parameters.AddWithValue("@IdUsuario", id_usuario);
                     sqlCommand.Parameters.AddWithValue("@Nombre", nombre);
                     sqlCommand.Parameters.AddWithValue("@Apellido", apellido);
-                    sqlCommand.Parameters.AddWithValue("@Contraseña", encriptar.Encriptar(contraseña));
                     sqlCommand.Parameters.AddWithValue("@Rol", rol);
                     sqlCommand.Parameters.AddWithValue("@Direccion", direccion);
                     sqlCommand.Parameters.AddWithValue("@Telefono", telefono);

@@ -27,7 +27,6 @@ namespace visual
         {
             personalToolStripMenuItem.Visible = (tipoUsuario == "Admin");
             automatizacionDeCalculoToolStripMenuItem.Visible = (tipoUsuario == "Admin" || tipoUsuario == "Supervisor" || tipoUsuario == "Trabajador");
-            seguridadToolStripMenuItem.Visible = (tipoUsuario == "Admin");
             facturaciónToolStripMenuItem.Visible = (tipoUsuario == "Admin" || tipoUsuario == "Trabajador");
         }
 
@@ -35,7 +34,6 @@ namespace visual
         {
             personalToolStripMenuItem.Visible = false;
             automatizacionDeCalculoToolStripMenuItem.Visible = false;
-            seguridadToolStripMenuItem.Visible = false;
             facturaciónToolStripMenuItem.Visible = false;
         }
 
@@ -72,6 +70,16 @@ namespace visual
         private void nuevoRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CambiarContenido(new NuevoRegistro());
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            panel.Controls.Clear();
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

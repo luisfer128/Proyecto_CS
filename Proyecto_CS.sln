@@ -31,7 +31,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CONECCION_BD", "CONECCION_B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBase_Manage", "DataBase_Manage\DataBase_Manage.csproj", "{1C241B96-D068-472D-AC7D-CA01543D1B81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloSeguridadTest", "ModuloSeguridadTest\ModuloSeguridadTest.csproj", "{D04EDC97-4E3E-4B88-A3D8-40E96939508A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuloSeguridadTest", "ModuloSeguridadTest\ModuloSeguridadTest.csproj", "{D04EDC97-4E3E-4B88-A3D8-40E96939508A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloRegistro_Test", "ModuloRegistro_Test\ModuloRegistro_Test.csproj", "{52F3BDAE-53D8-4BDB-9BCC-799D7F37F9F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{D04EDC97-4E3E-4B88-A3D8-40E96939508A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D04EDC97-4E3E-4B88-A3D8-40E96939508A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D04EDC97-4E3E-4B88-A3D8-40E96939508A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F3BDAE-53D8-4BDB-9BCC-799D7F37F9F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F3BDAE-53D8-4BDB-9BCC-799D7F37F9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F3BDAE-53D8-4BDB-9BCC-799D7F37F9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F3BDAE-53D8-4BDB-9BCC-799D7F37F9F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{707AB782-DD67-453A-A9CE-5591589C5629} = {1A302A94-A425-48D8-9288-31D9C3C645AE}
 		{1C241B96-D068-472D-AC7D-CA01543D1B81} = {1C84E96E-AA09-45B4-8751-A176025E3921}
 		{D04EDC97-4E3E-4B88-A3D8-40E96939508A} = {F64FC3E4-0AF3-486E-AACF-B9F127DF8E90}
+		{52F3BDAE-53D8-4BDB-9BCC-799D7F37F9F5} = {F64FC3E4-0AF3-486E-AACF-B9F127DF8E90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4C0428B4-929E-4F72-81BD-515EB7D95217}

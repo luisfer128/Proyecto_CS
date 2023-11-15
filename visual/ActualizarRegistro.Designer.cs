@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActualizarRegistro));
             label9 = new Label();
             btnActualizar = new Button();
             btnCancelar = new Button();
-            label10 = new Label();
-            txtContraseña = new TextBox();
             label4 = new Label();
             cmbRol = new ComboBox();
             txtNumero = new TextBox();
@@ -47,60 +46,52 @@
             cmbUsuario = new ComboBox();
             label7 = new Label();
             chbEstado = new CheckBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(251, 9);
+            label9.Font = new Font("Segoe UI Black", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label9.ForeColor = Color.ForestGreen;
+            label9.Location = new Point(375, 42);
             label9.Name = "label9";
-            label9.Size = new Size(284, 37);
+            label9.Size = new Size(316, 37);
             label9.TabIndex = 35;
             label9.Text = "Actualizacion de datos";
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(290, 348);
+            btnActualizar.BackColor = Color.DarkSeaGreen;
+            btnActualizar.FlatStyle = FlatStyle.Popup;
+            btnActualizar.Location = new Point(416, 314);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(75, 23);
             btnActualizar.TabIndex = 36;
             btnActualizar.Text = "Actualizar";
-            btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.UseVisualStyleBackColor = false;
             btnActualizar.Click += btnActualizar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(411, 348);
+            btnCancelar.BackColor = Color.DarkSeaGreen;
+            btnCancelar.FlatStyle = FlatStyle.Popup;
+            btnCancelar.Location = new Point(537, 314);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 37;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(405, 214);
-            label10.Name = "label10";
-            label10.Size = new Size(70, 15);
-            label10.TabIndex = 55;
-            label10.Text = "Contraseña:";
-            // 
-            // txtContraseña
-            // 
-            txtContraseña.Location = new Point(481, 206);
-            txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(133, 23);
-            txtContraseña.TabIndex = 54;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(290, 71);
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(393, 104);
             label4.Name = "label4";
-            label4.Size = new Size(50, 15);
+            label4.Size = new Size(52, 15);
             label4.TabIndex = 52;
             label4.Text = "Usuario:";
             // 
@@ -109,14 +100,14 @@
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRol.FormattingEnabled = true;
             cmbRol.Items.AddRange(new object[] { "Admin", "Supervisor", "Trabajador", "Estudiante" });
-            cmbRol.Location = new Point(232, 211);
+            cmbRol.Location = new Point(346, 236);
             cmbRol.Name = "cmbRol";
             cmbRol.Size = new Size(133, 23);
             cmbRol.TabIndex = 51;
             // 
             // txtNumero
             // 
-            txtNumero.Location = new Point(481, 126);
+            txtNumero.Location = new Point(595, 151);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(133, 23);
             txtNumero.TabIndex = 46;
@@ -125,15 +116,16 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(420, 135);
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(534, 160);
             label6.Name = "label6";
-            label6.Size = new Size(55, 15);
+            label6.Size = new Size(59, 15);
             label6.TabIndex = 45;
             label6.Text = "Telefono:";
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(481, 167);
+            txtCorreo.Location = new Point(595, 192);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(133, 23);
             txtCorreo.TabIndex = 44;
@@ -141,16 +133,18 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(429, 175);
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(543, 200);
             label5.Name = "label5";
-            label5.Size = new Size(46, 15);
+            label5.Size = new Size(48, 15);
             label5.TabIndex = 43;
             label5.Text = "Correo:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(184, 215);
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(298, 240);
             label3.Name = "label3";
             label3.Size = new Size(42, 15);
             label3.TabIndex = 42;
@@ -158,7 +152,7 @@
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(232, 167);
+            txtApellido.Location = new Point(346, 192);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(133, 23);
             txtApellido.TabIndex = 41;
@@ -167,24 +161,27 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(172, 175);
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(286, 200);
             label2.Name = "label2";
-            label2.Size = new Size(54, 15);
+            label2.Size = new Size(55, 15);
             label2.TabIndex = 40;
             label2.Text = "Apellido:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(172, 134);
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(286, 159);
             label1.Name = "label1";
-            label1.Size = new Size(54, 15);
+            label1.Size = new Size(56, 15);
             label1.TabIndex = 39;
             label1.Text = "Nombre:";
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(232, 126);
+            txtNombre.BackColor = SystemColors.Window;
+            txtNombre.Location = new Point(346, 151);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(133, 23);
             txtNombre.TabIndex = 38;
@@ -194,7 +191,7 @@
             // 
             cmbUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbUsuario.FormattingEnabled = true;
-            cmbUsuario.Location = new Point(346, 63);
+            cmbUsuario.Location = new Point(449, 96);
             cmbUsuario.Name = "cmbUsuario";
             cmbUsuario.Size = new Size(140, 23);
             cmbUsuario.TabIndex = 56;
@@ -203,32 +200,44 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(181, 256);
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(544, 244);
             label7.Name = "label7";
-            label7.Size = new Size(45, 15);
+            label7.Size = new Size(46, 15);
             label7.TabIndex = 57;
             label7.Text = "Estado:";
             // 
             // chbEstado
             // 
             chbEstado.AutoSize = true;
-            chbEstado.Location = new Point(232, 252);
+            chbEstado.Location = new Point(595, 240);
             chbEstado.Name = "chbEstado";
             chbEstado.Size = new Size(60, 19);
             chbEstado.TabIndex = 58;
             chbEstado.Text = "Activo";
             chbEstado.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.ACTUALIZACION_DATOS;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(12, 114);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(268, 233);
+            pictureBox1.TabIndex = 59;
+            pictureBox1.TabStop = false;
+            // 
             // ActualizarRegistro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Wheat;
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(chbEstado);
             Controls.Add(label7);
             Controls.Add(cmbUsuario);
-            Controls.Add(label10);
-            Controls.Add(txtContraseña);
             Controls.Add(label4);
             Controls.Add(cmbRol);
             Controls.Add(txtNumero);
@@ -243,9 +252,11 @@
             Controls.Add(btnCancelar);
             Controls.Add(btnActualizar);
             Controls.Add(label9);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ActualizarRegistro";
             Text = "ActualizarRegistro";
             Load += ActualizarRegistro_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -254,8 +265,6 @@
         private Label label9;
         private Button btnActualizar;
         private Button btnCancelar;
-        private Label label10;
-        private TextBox txtContraseña;
         private Label label4;
         private ComboBox cmbRol;
         private TextBox txtNumero;
@@ -270,5 +279,6 @@
         private ComboBox cmbUsuario;
         private Label label7;
         private CheckBox chbEstado;
+        private PictureBox pictureBox1;
     }
 }

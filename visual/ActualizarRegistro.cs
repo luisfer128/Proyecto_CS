@@ -67,14 +67,13 @@ namespace visual
         private void ActualizarRegistro_Load(object sender, EventArgs e)
         {
             LlenarCB();
-
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             try
             {
-                manejadorCRUD.ActualizarUsuario(cmbUsuario.SelectedValue.ToString(), txtNombre.Text, txtApellido.Text, txtContraseña.Text, cmbRol.Text, txtCorreo.Text, Estado(), txtNumero.Text);
+                manejadorCRUD.ActualizarUsuario(cmbUsuario.SelectedValue.ToString(), txtNombre.Text, txtApellido.Text, cmbRol.Text, txtCorreo.Text, Estado(), txtNumero.Text);
                 if (manejadorCRUD != null)
                 {
                     MessageBox.Show("Usuario actualizado correctamente");

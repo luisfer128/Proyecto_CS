@@ -63,9 +63,79 @@ namespace visual.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20141106122921_empresa_de_agua_llama_a_actualizar__tn0 {
+            get {
+                object obj = ResourceManager.GetObject("20141106122921_empresa-de-agua-llama-a-actualizar-_tn0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7b71d9b8_42ad_4d49_bc6b_d2d149fcafb3_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("_7b71d9b8-42ad-4d49-bc6b-d2d149fcafb3-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _c44c7480_4cb6_4512_a00e_5016156dee63 {
+            get {
+                object obj = ResourceManager.GetObject("_c44c7480-4cb6-4512-a00e-5016156dee63", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ACTUALIZACION_DATOS {
+            get {
+                object obj = ResourceManager.GetObject("ACTUALIZACION-DATOS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_user_profile_account_remove_icon_196557 {
             get {
                 object obj = ResourceManager.GetObject("delete_user_profile_account_remove_icon_196557", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eliminarperfil {
+            get {
+                object obj = ResourceManager.GetObject("eliminarperfil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_usuario_3 {
+            get {
+                object obj = ResourceManager.GetObject("login-usuario-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_remove_current_user_delete_profile_png_image_5551703 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-remove-current-user-delete-profile-png-image_5551703", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

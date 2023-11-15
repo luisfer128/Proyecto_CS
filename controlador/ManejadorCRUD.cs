@@ -23,9 +23,9 @@ namespace controlador
             operacionesCRUD.AgregarUsuario(usuario);
         }
 
-        public void ActualizarUsuario(string id_usuario, string nombre, string apellido, string contraseña, string rol, string direccion,char estado, string telefono)
+        public void ActualizarUsuario(string id_usuario, string nombre, string apellido, string rol, string direccion,char estado, string telefono)
         {
-            operacionesCRUD.ActualizarUsuario(id_usuario, nombre, apellido, contraseña, rol, direccion, estado, telefono);
+            operacionesCRUD.ActualizarUsuario(id_usuario, nombre, apellido, rol, direccion, estado, telefono);
         }
 
         public void EliminarUsuario(string idUsuario)
