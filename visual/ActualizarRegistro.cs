@@ -33,37 +33,6 @@ namespace visual
             this.Show();
         }
 
-        //VALIDACIONES
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Escriba solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Escriba solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Escriba solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Handled = true;
-                return;
-            }
-        }
-
         private void ActualizarRegistro_Load(object sender, EventArgs e)
         {
             LlenarCB();
@@ -148,6 +117,49 @@ namespace visual
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        //VALIDACIONES
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Escriba solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Escriba solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Escriba solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verificar si la longitud del texto supera el límite de 10 caracteres
+            if (textBox.Text.Length > 10)
+            {
+                textBox.Text = textBox.Text.Substring(0, 10);
+                textBox.SelectionStart = textBox.Text.Length;
+            }
         }
     }
 }

@@ -31,6 +31,40 @@ namespace visual
             nr.ShowDialog();
             this.Show();
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                manejadorCRUD.AgregarUsuario(new Usuario(txtNombre.Text, txtApellido.Text, txtUsuario.Text, txtContraseña.Text, cmbRol.Text, txtCorreo.Text, txtCedula.Text, txtNumero.Text, 'A'));
+                if (manejadorCRUD != null)
+                {
+                    MessageBox.Show("Usuario registrado exitosamente");
+                    this.Hide();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Cedula o usuario ya registrado");
+                }
+
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show("No puede contener campos vacíos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese una cédula valida", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         //VALIDACIONES
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -94,39 +128,6 @@ namespace visual
                 textBox.Text = textBox.Text.Substring(0, 10);
                 textBox.SelectionStart = textBox.Text.Length;
             }
-        }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                manejadorCRUD.AgregarUsuario(new Usuario(txtNombre.Text, txtApellido.Text, txtUsuario.Text, txtContraseña.Text, cmbRol.Text, txtCorreo.Text, txtCedula.Text, txtNumero.Text, 'A'));
-                if (manejadorCRUD != null)
-                {
-                    MessageBox.Show("Usuario registrado exitosamente");
-                    this.Hide();
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("Cedula o usuario ya registrado");
-                }
-
-            }
-            catch (SystemException ex)
-            {
-                MessageBox.Show("No puede contener campos vacíos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ingrese una cédula valida", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

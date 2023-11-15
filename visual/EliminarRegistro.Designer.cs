@@ -92,7 +92,7 @@
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(75, 23);
             btnRegresar.TabIndex = 40;
-            btnRegresar.Text = "Regresar";
+            btnRegresar.Text = "Cancelar";
             btnRegresar.UseVisualStyleBackColor = false;
             btnRegresar.Click += btnRegresar_Click;
             // 
