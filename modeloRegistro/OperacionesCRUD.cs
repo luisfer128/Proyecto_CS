@@ -8,6 +8,7 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using DataBase_Manage;
 using ModuloSeguridad;
+using ModuloSeguridad.__obj;
 
 namespace ModuloRegistro
 {

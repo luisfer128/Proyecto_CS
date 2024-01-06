@@ -1,4 +1,6 @@
-﻿namespace ModuloSeguridadTest
+﻿using ModuloSeguridad.__obj;
+
+namespace ModuloSeguridadTest
 {
     [TestClass]
     public class TestGestorLogin

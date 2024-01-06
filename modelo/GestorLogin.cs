@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using DataBase_Manage;
+using ModuloSeguridad.__obj;
 
 namespace ModuloSeguridad
 {

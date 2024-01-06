@@ -1,4 +1,4 @@
-﻿namespace ModuloSeguridad
+﻿namespace ModuloSeguridad.__obj
 {
     public class Usuario
     {
@@ -14,7 +14,7 @@
 
         public Usuario() { }
 
-        public Usuario(string nombre, string apellido,string usuario ,string contraseña, string rol, string direccion, string id, string telefono, char estado)
+        public Usuario(string nombre, string apellido, string usuario, string contraseña, string rol, string direccion, string id, string telefono, char estado)
         {
             this.nombre = nombre;
             this.apellido = apellido;

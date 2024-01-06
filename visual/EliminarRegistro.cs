@@ -1,6 +1,6 @@
 ﻿using controlador;
 using ModuloRegistro;
-using ModuloSeguridad;
+using ModuloSeguridad.__obj;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

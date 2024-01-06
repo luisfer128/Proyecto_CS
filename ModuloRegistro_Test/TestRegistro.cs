@@ -1,3 +1,5 @@
+using ModuloSeguridad.__obj;
+
 namespace ModuloRegistro_Test
 {
     [TestClass]

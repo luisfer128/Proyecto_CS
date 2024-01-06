@@ -13,7 +13,6 @@
   <ItemGroup>
     <ProjectReference Include="..\modeloRegistro\ModuloRegistro.csproj" />
     <ProjectReference Include="..\modelo\ModuloSeguridad.csproj" />
-    <ProjectReference Include="..\ModuloCalculos\ModuloCalculos.csproj" />
     <ProjectReference Include="..\ModuloFacturacion\ModuloFacturacion.csproj" />
   </ItemGroup>
 

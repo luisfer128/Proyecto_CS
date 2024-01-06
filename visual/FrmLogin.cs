@@ -1,5 +1,6 @@
 using controlador;
 using ModuloSeguridad;
+using ModuloSeguridad.__obj;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;

@@ -1,7 +1,7 @@
 ﻿using controlador;
 using Microsoft.VisualBasic.ApplicationServices;
 using ModuloRegistro;
-using ModuloSeguridad;
+using ModuloSeguridad.__obj;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

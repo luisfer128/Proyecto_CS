@@ -1,5 +1,6 @@
 ﻿using ModuloRegistro;
 using ModuloSeguridad;
+using ModuloSeguridad.__obj;
 
 namespace controlador
 {
