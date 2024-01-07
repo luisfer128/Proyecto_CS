@@ -48,10 +48,37 @@ namespace ModuloServicios
                 {
                     // Asignar la conexión
                     sqlCommand.Connection = conn.OpenConnection();
-                    sqlCommand.CommandText = "EliminarUsuario";
+                    sqlCommand.CommandText = "sp_EliminarProductoDelCarrito";
                     sqlCommand.CommandType = CommandType.StoredProcedure;
                     sqlCommand.Parameters.AddWithValue("@Id_Usuario", IdUsuario);
                     sqlCommand.Parameters.AddWithValue("@Id_Producto", IdProducto);
+
+                    // Ejecutar el Stored Procedure
+                    sqlCommand.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                throw ex;
+            }
+            finally
+            {
+                conn.CloseConnection();
+            }
+        }
+
+        public void VaciarCarrito(string IdUsuario)
+        {
+            try
+            {
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    // Asignar la conexión
+                    sqlCommand.Connection = conn.OpenConnection();
+                    sqlCommand.CommandText = "sp_EliminarTodoDelCarrito";
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    sqlCommand.Parameters.AddWithValue("@Id_Usuario", IdUsuario);
 
                     // Ejecutar el Stored Procedure
                     sqlCommand.ExecuteNonQuery();
@@ -133,6 +160,38 @@ namespace ModuloServicios
                 conn.CloseConnection();
             }
         }
+
+        public decimal ObtenerValorTotalCarrito(string IdUsuario)
+        {
+            try
+            {
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    // Asignar la conexión
+                    sqlCommand.Connection = conn.OpenConnection();
+                    sqlCommand.CommandText = "sp_SumarValorTotalCarrito";
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                    // Parámetros del procedimiento almacenado
+                    sqlCommand.Parameters.AddWithValue("@Id_Usuario", IdUsuario);
+
+                    // Ejecutar el procedimiento almacenado y obtener el resultado
+                    decimal valorTotalCarrito = (decimal)sqlCommand.ExecuteScalar();
+                    return valorTotalCarrito;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                throw ex;
+            }
+            finally
+            {
+                conn.CloseConnection();
+            }
+        }
+
+        
 
     }
 }

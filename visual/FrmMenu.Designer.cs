@@ -116,6 +116,7 @@
             carritoToolStripMenuItem.Image = Properties.Resources.carrito;
             carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
             carritoToolStripMenuItem.Size = new Size(28, 20);
+            carritoToolStripMenuItem.Click += carritoToolStripMenuItem_Click;
             // 
             // panel
             // 

@@ -59,5 +59,15 @@ namespace controlador
         {
             return carritoCRUD.ObtenerCantidadProductoEnCarrito(IdUsuario, IdProducto);
         }
+
+        public decimal ObtenerValorTotalCarrito(string IdUsuario)
+        {
+            return carritoCRUD.ObtenerValorTotalCarrito(IdUsuario);
+        }
+
+        public void VaciarCarrito(string IdUsuario)
+        {
+            carritoCRUD.VaciarCarrito(IdUsuario);
+        }
     }
 }

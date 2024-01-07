@@ -13,7 +13,6 @@ namespace visual
     public partial class FrmMenu : Form
     {
         readonly string id_Usuario;
-        private Form form = null;
 
         public FrmMenu(string id_Usuario, string tipoUsuario)
         {
@@ -76,6 +75,10 @@ namespace visual
         private void servicios_Click(object sender, EventArgs e)
         {
             CambiarContenido(new FrmServicios(id_Usuario));
+        }
+        private void carritoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CambiarContenido(new FrmCarrito(id_Usuario));
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
