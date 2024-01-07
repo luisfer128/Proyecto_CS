@@ -1,21 +1,23 @@
 ﻿using ModuloRegistro;
 using ModuloSeguridad.__obj;
-using System;
-using System.Collections.Generic;
+using ModuloServicios;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace controlador
 {
     public class ManejadorCRUD
     {
         private readonly IOperacionesCRUD operacionesCRUD;
+        private readonly ICarritoCRUD carritoCRUD; 
 
         public ManejadorCRUD(IOperacionesCRUD operacionesCRUD)
         {
             this.operacionesCRUD = operacionesCRUD;
+        }
+
+        public ManejadorCRUD(ICarritoCRUD carritoCRUD)
+        {
+            this.carritoCRUD = carritoCRUD;
         }
 
         public void AgregarUsuario(Usuario usuario)
@@ -36,6 +38,26 @@ namespace controlador
         public List<Usuario> SelecUsuarios()
         {
             return operacionesCRUD.SelectUsuarios();
+        }
+
+        public void AgregarServicio(string Idusuario, int IdProducto, int Cantidad)
+        {
+            carritoCRUD.AgregarServicio(Idusuario,IdProducto,Cantidad);
+        }
+
+        public void EliminarServicio(string IdUsuario, int IdProducto)
+        {
+            carritoCRUD.EliminarServicio(IdUsuario, IdProducto);
+        }
+
+        public DataTable ObtenerProductosDelCarrito(string IdUsuario)
+        {
+            return carritoCRUD.ObtenerProductosDelCarrito(IdUsuario);
+        }
+
+        public int ObtenerCantidadProductoEnCarrito(string IdUsuario, int IdProducto)
+        {
+            return carritoCRUD.ObtenerCantidadProductoEnCarrito(IdUsuario, IdProducto);
         }
     }
 }

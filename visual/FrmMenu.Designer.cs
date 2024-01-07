@@ -35,22 +35,18 @@
             nuevoRegistroToolStripMenuItem = new ToolStripMenuItem();
             actualizarRegistroToolStripMenuItem = new ToolStripMenuItem();
             eliminarRegistroToolStripMenuItem = new ToolStripMenuItem();
-            automatizacionDeCalculoToolStripMenuItem = new ToolStripMenuItem();
-            registrarTransaccionesToolStripMenuItem = new ToolStripMenuItem();
-            formulasDeCalculoToolStripMenuItem = new ToolStripMenuItem();
+            servicios = new ToolStripMenuItem();
             facturaciónToolStripMenuItem = new ToolStripMenuItem();
-            registroDeFacturaToolStripMenuItem = new ToolStripMenuItem();
-            imprimirFacturaToolStripMenuItem = new ToolStripMenuItem();
             cerrarSesiónToolStripMenuItem = new ToolStripMenuItem();
-            panel = new Panel();
             carritoToolStripMenuItem = new ToolStripMenuItem();
+            panel = new Panel();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.AntiqueWhite;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, personalToolStripMenuItem, automatizacionDeCalculoToolStripMenuItem, facturaciónToolStripMenuItem, cerrarSesiónToolStripMenuItem, carritoToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, personalToolStripMenuItem, servicios, facturaciónToolStripMenuItem, cerrarSesiónToolStripMenuItem, carritoToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -92,43 +88,18 @@
             eliminarRegistroToolStripMenuItem.Text = "Eliminar Registro";
             eliminarRegistroToolStripMenuItem.Click += eliminarRegistroToolStripMenuItem_Click;
             // 
-            // automatizacionDeCalculoToolStripMenuItem
+            // servicios
             // 
-            automatizacionDeCalculoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registrarTransaccionesToolStripMenuItem, formulasDeCalculoToolStripMenuItem });
-            automatizacionDeCalculoToolStripMenuItem.Name = "automatizacionDeCalculoToolStripMenuItem";
-            automatizacionDeCalculoToolStripMenuItem.Size = new Size(65, 20);
-            automatizacionDeCalculoToolStripMenuItem.Text = "Servicios";
-            // 
-            // registrarTransaccionesToolStripMenuItem
-            // 
-            registrarTransaccionesToolStripMenuItem.Name = "registrarTransaccionesToolStripMenuItem";
-            registrarTransaccionesToolStripMenuItem.Size = new Size(180, 22);
-            registrarTransaccionesToolStripMenuItem.Text = "Hardware";
-            // 
-            // formulasDeCalculoToolStripMenuItem
-            // 
-            formulasDeCalculoToolStripMenuItem.Name = "formulasDeCalculoToolStripMenuItem";
-            formulasDeCalculoToolStripMenuItem.Size = new Size(180, 22);
-            formulasDeCalculoToolStripMenuItem.Text = "Cursos";
+            servicios.Name = "servicios";
+            servicios.Size = new Size(65, 20);
+            servicios.Text = "Servicios";
+            servicios.Click += servicios_Click;
             // 
             // facturaciónToolStripMenuItem
             // 
-            facturaciónToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registroDeFacturaToolStripMenuItem, imprimirFacturaToolStripMenuItem });
             facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
             facturaciónToolStripMenuItem.Size = new Size(63, 20);
             facturaciónToolStripMenuItem.Text = "Facturas";
-            // 
-            // registroDeFacturaToolStripMenuItem
-            // 
-            registroDeFacturaToolStripMenuItem.Name = "registroDeFacturaToolStripMenuItem";
-            registroDeFacturaToolStripMenuItem.Size = new Size(180, 22);
-            registroDeFacturaToolStripMenuItem.Text = "Revisar facturas";
-            // 
-            // imprimirFacturaToolStripMenuItem
-            // 
-            imprimirFacturaToolStripMenuItem.Name = "imprimirFacturaToolStripMenuItem";
-            imprimirFacturaToolStripMenuItem.Size = new Size(180, 22);
-            imprimirFacturaToolStripMenuItem.Text = "Imprimir factura";
             // 
             // cerrarSesiónToolStripMenuItem
             // 
@@ -139,6 +110,13 @@
             cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             cerrarSesiónToolStripMenuItem.Click += cerrarSesiónToolStripMenuItem_Click;
             // 
+            // carritoToolStripMenuItem
+            // 
+            carritoToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            carritoToolStripMenuItem.Image = Properties.Resources.carrito;
+            carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
+            carritoToolStripMenuItem.Size = new Size(28, 20);
+            // 
             // panel
             // 
             panel.BackgroundImage = Properties.Resources._7b71d9b8_42ad_4d49_bc6b_d2d149fcafb3_removebg_preview;
@@ -147,13 +125,6 @@
             panel.Name = "panel";
             panel.Size = new Size(800, 424);
             panel.TabIndex = 21;
-            // 
-            // carritoToolStripMenuItem
-            // 
-            carritoToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
-            carritoToolStripMenuItem.Image = Properties.Resources.carrito;
-            carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
-            carritoToolStripMenuItem.Size = new Size(28, 20);
             // 
             // FrmMenu
             // 
@@ -180,12 +151,8 @@
         private ToolStripMenuItem nuevoRegistroToolStripMenuItem;
         private ToolStripMenuItem actualizarRegistroToolStripMenuItem;
         private ToolStripMenuItem eliminarRegistroToolStripMenuItem;
-        private ToolStripMenuItem automatizacionDeCalculoToolStripMenuItem;
-        private ToolStripMenuItem registrarTransaccionesToolStripMenuItem;
-        private ToolStripMenuItem formulasDeCalculoToolStripMenuItem;
+        private ToolStripMenuItem servicios;
         private ToolStripMenuItem facturaciónToolStripMenuItem;
-        private ToolStripMenuItem registroDeFacturaToolStripMenuItem;
-        private ToolStripMenuItem imprimirFacturaToolStripMenuItem;
         private Panel panel;
         private ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private ToolStripMenuItem carritoToolStripMenuItem;

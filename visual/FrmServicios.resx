@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+  <!--
     Microsoft ResX Schema 
-    
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,41 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="delete_user_profile_account_remove_icon_196557" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_user_profile_account_remove_icon_196557.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Es para todos lo que quieren ir más allá de solo aprender a ensamblar una PC, por eso en éste curso te vas a convertir en experto armando PCs para Gaming o Profesionales, conocerás los componentes, compatibilidades y configuraciones necesarias, para dedicarte a esto, administrar un negocio de esto y cobrar bien por hacerlo. </value>
   </data>
-  <data name="eliminarperfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eliminarperfil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pngtree-remove-current-user-delete-profile-png-image_5551703" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-remove-current-user-delete-profile-png-image_5551703.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ACTUALIZACION-DATOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ACTUALIZACION-DATOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="20141106122921_empresa-de-agua-llama-a-actualizar-_tn0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20141106122921_empresa-de-agua-llama-a-actualizar-_tn0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2-3-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2-3-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5100872_cdc1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5100872_cdc1_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login-usuario-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login-usuario-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="carrito" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carrito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_c44c7480-4cb6-4512-a00e-5016156dee63" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_c44c7480-4cb6-4512-a00e-5016156dee63.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_7b71d9b8-42ad-4d49-bc6b-d2d149fcafb3-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_7b71d9b8-42ad-4d49-bc6b-d2d149fcafb3-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="e02f6289-883c-454c-8f35-f6a0cee78066" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\e02f6289-883c-454c-8f35-f6a0cee78066.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value>En este curso de base de datos profundizarás en SQL. Trabajarás no solo con una tabla sino con varias, y verás como definir relaciones entre ellas. Diseñarás tu propia base de datos desde cero, aprendiendo sobre esquemas y tipos de datos. Aprenderás a optimizar tus consultas y trabajar con DBMS (sistemas de gestión de bases de datos) como MySQL y PostgreSQL, que podrás usar para hacer todo esto y más, a una escala mucho mayor.</value>
   </data>
 </root>

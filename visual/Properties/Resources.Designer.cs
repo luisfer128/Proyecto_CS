@@ -63,9 +63,29 @@ namespace visual.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2_3_1 {
+            get {
+                object obj = ResourceManager.GetObject("2-3-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _20141106122921_empresa_de_agua_llama_a_actualizar__tn0 {
             get {
                 object obj = ResourceManager.GetObject("20141106122921_empresa-de-agua-llama-a-actualizar-_tn0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5100872_cdc1_2 {
+            get {
+                object obj = ResourceManager.GetObject("5100872_cdc1_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +136,16 @@ namespace visual.Properties {
         internal static System.Drawing.Bitmap delete_user_profile_account_remove_icon_196557 {
             get {
                 object obj = ResourceManager.GetObject("delete_user_profile_account_remove_icon_196557", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap e02f6289_883c_454c_8f35_f6a0cee78066 {
+            get {
+                object obj = ResourceManager.GetObject("e02f6289-883c-454c-8f35-f6a0cee78066", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -19,6 +19,7 @@ namespace visual
         {
             InitializeComponent();
             this.IsMdiContainer = true;
+            this.id_Usuario = id_Usuario;
             HideExtraOptions();
             ShowExtraOptionsForUser(tipoUsuario);
         }
@@ -26,14 +27,14 @@ namespace visual
         private void ShowExtraOptionsForUser(string tipoUsuario)
         {
             personalToolStripMenuItem.Visible = (tipoUsuario == "Admin");
-            automatizacionDeCalculoToolStripMenuItem.Visible = (tipoUsuario == "Admin" || tipoUsuario == "Supervisor" || tipoUsuario == "Trabajador");
+            servicios.Visible = (tipoUsuario == "Admin" || tipoUsuario == "Supervisor" || tipoUsuario == "Trabajador");
             facturaciónToolStripMenuItem.Visible = (tipoUsuario == "Admin" || tipoUsuario == "Trabajador");
         }
 
         private void HideExtraOptions()
         {
             personalToolStripMenuItem.Visible = false;
-            automatizacionDeCalculoToolStripMenuItem.Visible = false;
+            servicios.Visible = false;
             facturaciónToolStripMenuItem.Visible = false;
         }
 
@@ -72,6 +73,11 @@ namespace visual
             CambiarContenido(new NuevoRegistro());
         }
 
+        private void servicios_Click(object sender, EventArgs e)
+        {
+            CambiarContenido(new FrmServicios(id_Usuario));
+        }
+
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             panel.Controls.Clear();
@@ -81,5 +87,6 @@ namespace visual
         {
             this.Close();
         }
+    
     }
 }

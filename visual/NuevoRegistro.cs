@@ -1,6 +1,6 @@
 ﻿using controlador;
 using ModuloRegistro;
-using ModuloSeguridad;
+using ModuloSeguridad.__obj;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,14 +22,6 @@ namespace visual
         {
             InitializeComponent();
             manejadorCRUD = new ManejadorCRUD(operacionesCRUD);
-        }
-
-        private void nuevoRegistroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            NuevoRegistro nr = new NuevoRegistro();
-            nr.ShowDialog();
-            this.Show();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
