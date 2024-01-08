@@ -29,6 +29,10 @@ namespace visual
         {
             dataGridView1.DataSource = manejadorCRUD.ObtenerProductosDelCarrito(IdUsuario);
             label3.Text = manejadorCRUD.ObtenerValorTotalCarrito(IdUsuario).ToString() + "$";
+            if (dataGridView1.Rows.Count == 0)
+            {
+                BtnPagar.Enabled = false;
+            }
         }
 
         private void BtnVaciarCarrito_Click(object sender, EventArgs e)
@@ -36,11 +40,31 @@ namespace visual
             manejadorCRUD.VaciarCarrito(IdUsuario);
             dataGridView1.DataSource = manejadorCRUD.ObtenerProductosDelCarrito(IdUsuario);
             label3.Text = manejadorCRUD.ObtenerValorTotalCarrito(IdUsuario).ToString() + "$";
+            if (dataGridView1.Rows.Count == 0)
+            {
+                BtnPagar.Enabled = false;
+            }
         }
 
         private void BtnPagar_Click(object sender, EventArgs e)
         {
+            decimal total = manejadorCRUD.ObtenerValorTotalCarrito(IdUsuario);
+            int IdMetodoPago = 1;
 
+            if (radioButton1.Checked)
+            {
+                IdMetodoPago = 1;
+            }else if (radioButton2.Checked)
+            {
+                IdMetodoPago = 2;
+            }
+
+            FrmPago pago = new(IdUsuario, IdMetodoPago, total);
+            pago.ShowDialog();
+            pago.Close();
+            manejadorCRUD.VaciarCarrito(IdUsuario);
+            dataGridView1.DataSource = manejadorCRUD.ObtenerProductosDelCarrito(IdUsuario);
+            label3.Text = manejadorCRUD.ObtenerValorTotalCarrito(IdUsuario).ToString() + "$";
         }
     }
 }

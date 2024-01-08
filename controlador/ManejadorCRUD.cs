@@ -1,4 +1,5 @@
 ﻿using ModuloRegistro;
+using ModuloFacturacion;
 using ModuloSeguridad.__obj;
 using ModuloServicios;
 using System.Data;
@@ -8,7 +9,9 @@ namespace controlador
     public class ManejadorCRUD
     {
         private readonly IOperacionesCRUD operacionesCRUD;
-        private readonly ICarritoCRUD carritoCRUD; 
+        private readonly ICarritoCRUD carritoCRUD;
+        private readonly IDomicilioCRUD domicilioCRUD;
+        private readonly IFacturaCRUD facturacionCRUD;
 
         public ManejadorCRUD(IOperacionesCRUD operacionesCRUD)
         {
@@ -18,6 +21,15 @@ namespace controlador
         public ManejadorCRUD(ICarritoCRUD carritoCRUD)
         {
             this.carritoCRUD = carritoCRUD;
+        }
+
+        public ManejadorCRUD(IDomicilioCRUD domicilioCRUD)
+        {
+            this.domicilioCRUD = domicilioCRUD;
+        }
+        public ManejadorCRUD(IFacturaCRUD facturacionCRUD)
+        {
+            this.facturacionCRUD = facturacionCRUD;
         }
 
         public void AgregarUsuario(Usuario usuario)
@@ -69,5 +81,31 @@ namespace controlador
         {
             carritoCRUD.VaciarCarrito(IdUsuario);
         }
+
+        public int AgregarDomicilio(string Idusuario, string Calle, string Estado, string Ciudad, string Pais, string CodigoPostal)
+        {
+            return domicilioCRUD.AgregarDomicilio(Idusuario,Calle,Estado,Ciudad,Pais,CodigoPostal);
+        }
+
+        public int InsertarOrdenPago(string IdUsuario, int IdDomicilio, int IdPago, decimal Total)
+        {
+            return carritoCRUD.InsertarOrdenPago(IdUsuario, IdDomicilio, IdPago, Total);
+        }
+
+        public int InsertarDetalleOrdenPago(int IdOrdenPago, int IdProducto, int Cantidad)
+        {
+            return carritoCRUD.InsertarDetalleOrdenPago(IdOrdenPago, IdProducto, Cantidad);
+        }
+
+        public void InsertarFactura(int IdDetalleOrdenPago, DateTime FechaEmision, string EstadoPago)
+        {
+            carritoCRUD.InsertarFactura(IdDetalleOrdenPago, FechaEmision, EstadoPago);
+        }
+
+        public DataTable ObtenerDetallesFacturaPorUsuario(string IdUsuario)
+        {
+            return facturacionCRUD.ObtenerDetallesFacturaPorUsuario(IdUsuario);
+        }
+
     }
 }

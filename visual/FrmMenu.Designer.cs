@@ -100,6 +100,7 @@
             facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
             facturaciónToolStripMenuItem.Size = new Size(63, 20);
             facturaciónToolStripMenuItem.Text = "Facturas";
+            facturaciónToolStripMenuItem.Click += facturaciónToolStripMenuItem_Click;
             // 
             // cerrarSesiónToolStripMenuItem
             // 
@@ -137,7 +138,7 @@
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmMenu";
-            Text = "Menu";
+            Text = "SINCOMPU.SA";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

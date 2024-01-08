@@ -45,9 +45,9 @@ namespace ModuloSeguridad
             {
                 usuario.rol = "Trabajador";
             }
-            else if (nombreRol == "Estudiante")
+            else if (nombreRol == "Cliente")
             {
-                usuario.rol = "Estudiante";
+                usuario.rol = "Cliente";
             }
 
             log.RegistrarLog(mod, $"Cambio de rol al usuario:{usuario.nombre} a rol: {nombreRol}");

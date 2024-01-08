@@ -102,10 +102,10 @@
             radioButton1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             radioButton1.Location = new Point(611, 82);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(176, 29);
+            radioButton1.Size = new Size(179, 29);
             radioButton1.TabIndex = 4;
             radioButton1.TabStop = true;
-            radioButton1.Text = "Tarjeta de crédito";
+            radioButton1.Text = "Tarjeta de Crédito";
             radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -114,9 +114,9 @@
             radioButton2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             radioButton2.Location = new Point(611, 107);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(84, 29);
+            radioButton2.Size = new Size(173, 29);
             radioButton2.TabIndex = 5;
-            radioButton2.Text = "PayPal";
+            radioButton2.Text = "Trajeta de Débito";
             radioButton2.UseVisualStyleBackColor = true;
             // 
             // label2

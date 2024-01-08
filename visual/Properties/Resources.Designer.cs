@@ -113,6 +113,16 @@ namespace visual.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Accepted_Cards_US {
+            get {
+                object obj = ResourceManager.GetObject("Accepted-Cards-US", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ACTUALIZACION_DATOS {
             get {
                 object obj = ResourceManager.GetObject("ACTUALIZACION-DATOS", resourceCulture);

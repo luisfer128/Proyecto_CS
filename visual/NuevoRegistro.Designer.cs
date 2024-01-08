@@ -193,7 +193,7 @@
             // 
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRol.FormattingEnabled = true;
-            cmbRol.Items.AddRange(new object[] { "Admin", "Supervisor", "Trabajador", "Estudiante" });
+            cmbRol.Items.AddRange(new object[] { "Admin", "Supervisor", "Trabajador", "Cliente" });
             cmbRol.Location = new Point(407, 209);
             cmbRol.Name = "cmbRol";
             cmbRol.Size = new Size(133, 23);

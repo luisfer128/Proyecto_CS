@@ -15,5 +15,8 @@ namespace ModuloServicios
         DataTable ObtenerProductosDelCarrito(string IdUsuario);
         public int ObtenerCantidadProductoEnCarrito(string IdUsuario, int IdProducto);
         public decimal ObtenerValorTotalCarrito(string IdUsuario);
+        public int InsertarOrdenPago(string IdUsuario, int IdDomicilio, int IdPago, decimal Total);
+        public int InsertarDetalleOrdenPago(int IdOrdenPago, int IdProducto, int Cantidad);
+        public void InsertarFactura(int IdDetalleOrdenPago, DateTime FechaEmision, string EstadoPago);
     }
 }

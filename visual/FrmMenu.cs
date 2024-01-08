@@ -26,8 +26,8 @@ namespace visual
         private void ShowExtraOptionsForUser(string tipoUsuario)
         {
             personalToolStripMenuItem.Visible = (tipoUsuario == "Admin");
-            servicios.Visible = (tipoUsuario == "Admin" || tipoUsuario == "Supervisor" || tipoUsuario == "Trabajador");
-            facturaciónToolStripMenuItem.Visible = (tipoUsuario == "Admin" || tipoUsuario == "Trabajador");
+            servicios.Visible = (tipoUsuario == "Admin" || tipoUsuario == "Supervisor" || tipoUsuario == "Trabajador" || tipoUsuario == "Cliente");
+            facturaciónToolStripMenuItem.Visible = (tipoUsuario == "Admin" || tipoUsuario == "Trabajador" || tipoUsuario == "Cliente");
         }
 
         private void HideExtraOptions()
@@ -79,6 +79,11 @@ namespace visual
         private void carritoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CambiarContenido(new FrmCarrito(id_Usuario));
+        }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CambiarContenido(new FrmFacturas(id_Usuario));
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
