@@ -133,6 +133,7 @@
             linkLabel1.TabIndex = 16;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Registrarse";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // FrmLogin
             // 

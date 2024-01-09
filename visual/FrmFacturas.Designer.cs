@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvver = new DataGridView();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvver).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvver
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 65);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(776, 331);
-            dataGridView1.TabIndex = 0;
+            dgvver.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvver.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvver.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvver.Location = new Point(12, 65);
+            dgvver.Name = "dgvver";
+            dgvver.RowTemplate.Height = 25;
+            dgvver.Size = new Size(776, 284);
+            dgvver.TabIndex = 0;
             // 
             // label1
             // 
@@ -54,25 +55,38 @@
             label1.TabIndex = 1;
             label1.Text = "Facturas";
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(672, 374);
+            button1.Name = "button1";
+            button1.Size = new Size(116, 34);
+            button1.TabIndex = 2;
+            button1.Text = "Imprimir";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // FrmFacturas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Wheat;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 438);
+            Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvver);
             Name = "FrmFacturas";
             Text = "Facturas";
             Load += FrmFacturas_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvver).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvver;
         private Label label1;
+        private Button button1;
     }
 }
