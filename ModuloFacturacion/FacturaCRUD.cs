@@ -1,9 +1,6 @@
 ﻿using DataBase_Manage;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ModuloFacturacion
 {
