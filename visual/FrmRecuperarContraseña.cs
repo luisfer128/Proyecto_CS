@@ -16,5 +16,10 @@ namespace visual
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Si su correo esta registrado, le llegará un correo para recuperar su contraseña");
+        }
     }
 }

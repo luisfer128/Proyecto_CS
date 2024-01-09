@@ -62,6 +62,7 @@
             llRecuperar.TabIndex = 14;
             llRecuperar.TabStop = true;
             llRecuperar.Text = "Recuperar contraseña";
+            llRecuperar.LinkClicked += llRecuperar_LinkClicked;
             // 
             // btnLogin
             // 
@@ -153,7 +154,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmLogin";
             Text = "Iniciar Sesión";
-            Load += FrmLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

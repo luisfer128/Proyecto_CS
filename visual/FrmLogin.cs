@@ -1,9 +1,6 @@
 using controlador;
 using ModuloSeguridad;
 using ModuloSeguridad.__obj;
-using System.Security.Cryptography;
-using System.Text;
-using System.Windows.Forms;
 
 namespace visual
 {
@@ -46,15 +43,22 @@ namespace visual
             }
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            FrmRegistrarCliente frmRegistrarCliente = new FrmRegistrarCliente();
+            frmRegistrarCliente.ShowDialog();
+            frmRegistrarCliente.Close();
+            frmRegistrarCliente.Dispose();
+            GC.Collect();
+        }
 
+        private void llRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmRecuperarContraseña frmRecuperarContraseña = new FrmRecuperarContraseña();
+            frmRecuperarContraseña.ShowDialog();
+            frmRecuperarContraseña.Close();
+            frmRecuperarContraseña.Dispose();
+            GC.Collect();
         }
     }
 }
