@@ -163,5 +163,49 @@ namespace ModuloRegistro
                 conn.CloseConnection();
             }
         }
+
+        public bool ValidarCedula(string cedula)
+        {
+            if (string.IsNullOrWhiteSpace(cedula) || cedula.Length != 10)
+            {
+                return false;
+            }
+
+            // Verificar que los primeros 9 caracteres sean dígitos numéricos
+            if (!cedula.Substring(0, 9).All(char.IsDigit))
+            {
+                return false;
+            }
+
+            // Obtener el último dígito (dígito verificador)
+            int verificador = int.Parse(cedula[9].ToString());
+
+            // Calcular el dígito verificador válido
+            int suma = 0;
+            for (int i = 0; i < 9; i++)
+            {
+                int digito = int.Parse(cedula[i].ToString());
+                if (i % 2 == 0)
+                {
+                    digito *= 2;
+                    if (digito > 9)
+                    {
+                        digito -= 9;
+                    }
+                }
+                suma += digito;
+            }
+
+            int digitoVerificadorValido = 0;
+            if (suma % 10 != 0)
+            {
+                digitoVerificadorValido = 10 - (suma % 10);
+            }
+
+            // Comparar el dígito verificador con el calculado
+            return verificador == digitoVerificadorValido;
+        }
+
+
     }
 }

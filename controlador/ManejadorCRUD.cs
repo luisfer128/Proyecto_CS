@@ -107,5 +107,10 @@ namespace controlador
             return facturacionCRUD.ObtenerDetallesFacturaPorUsuario(IdUsuario);
         }
 
+        public bool ValidarCedula(string cedula)
+        {
+            return operacionesCRUD.ValidarCedula(cedula);
+        }
+
     }
 }

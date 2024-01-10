@@ -1,5 +1,7 @@
 ﻿using controlador;
+using Microsoft.VisualBasic.Logging;
 using ModuloRegistro;
+using ModuloSeguridad;
 using ModuloSeguridad.__obj;
 using System;
 using System.Collections.Generic;
@@ -17,6 +19,7 @@ namespace visual
     {
         private readonly IOperacionesCRUD operacionesCRUD = new OperacionesCRUD();
         private readonly ManejadorCRUD manejadorCRUD;
+        
 
         public FrmRegistrarCliente()
         {
@@ -36,8 +39,26 @@ namespace visual
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            string cedula;
             try
             {
+                if (manejadorCRUD.ValidarCedula(txtCedula.Text))
+                {
+                    cedula = txtCedula.Text;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+
+                if (string.IsNullOrWhiteSpace(txtApellido.Text) || string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                        string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text) || 
+                        string.IsNullOrWhiteSpace(txtCedula.Text) || string.IsNullOrWhiteSpace(txtNumero.Text) || 
+                        string.IsNullOrWhiteSpace(txtCorreo.Text))
+                {
+                    throw new SystemException();
+                }
+
                 manejadorCRUD.AgregarUsuario(new Usuario(txtNombre.Text, txtApellido.Text, txtUsuario.Text, txtContraseña.Text, "Cliente", txtCorreo.Text, txtCedula.Text, txtNumero.Text, 'A'));
                 if (manejadorCRUD != null)
                 {

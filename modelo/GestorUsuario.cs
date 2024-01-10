@@ -53,5 +53,7 @@ namespace ModuloSeguridad
             log.RegistrarLog(mod, $"Cambio de rol al usuario:{usuario.nombre} a rol: {nombreRol}");
         }
 
+        
+
     }
 }

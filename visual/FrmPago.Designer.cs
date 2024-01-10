@@ -152,6 +152,7 @@
             TxtNombreTarjeta.Name = "TxtNombreTarjeta";
             TxtNombreTarjeta.Size = new Size(291, 23);
             TxtNombreTarjeta.TabIndex = 13;
+            TxtNombreTarjeta.KeyPress += TxtNombreTarjeta_KeyPress;
             // 
             // TxtNumeroTarjeta
             // 
@@ -159,6 +160,7 @@
             TxtNumeroTarjeta.Name = "TxtNumeroTarjeta";
             TxtNumeroTarjeta.Size = new Size(291, 23);
             TxtNumeroTarjeta.TabIndex = 14;
+            TxtNumeroTarjeta.KeyPress += TxtNumeroTarjeta_KeyPress;
             // 
             // TxtCVV
             // 
@@ -166,6 +168,7 @@
             TxtCVV.Name = "TxtCVV";
             TxtCVV.Size = new Size(111, 23);
             TxtCVV.TabIndex = 15;
+            TxtCVV.KeyPress += TxtCVV_KeyPress;
             // 
             // label7
             // 
